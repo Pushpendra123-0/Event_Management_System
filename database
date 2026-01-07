@@ -1,0 +1,24 @@
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    username TEXT,
+    password TEXT,
+    role TEXT
+);
+
+CREATE TABLE events (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    price REAL
+);
+
+CREATE TABLE orders (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT,
+    items TEXT,
+    amount REAL,
+    status TEXT
+);
+
+INSERT INTO users VALUES (1,'admin','1234','admin');
+INSERT INTO users VALUES (2,'vendor','1234','vendor');
+INSERT INTO users VALUES (3,'user','1234','user');
