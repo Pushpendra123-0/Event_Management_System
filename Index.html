@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="box">
+
+<!-- LOGIN -->
+<div id="login">
+    <h2>Login</h2>
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- ADMIN -->
+<div id="admin" class="hidden">
+    <h2>Admin Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<!-- VENDOR -->
+<div id="vendor" class="hidden">
+    <h2>Vendor Dashboard</h2>
+    <input id="ename" placeholder="Event Name">
+    <input id="eprice" placeholder="Price">
+    <button onclick="addEvent()">Add Event</button>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<!-- USER -->
+<div id="user" class="hidden">
+    <h2>User Dashboard</h2>
+
+    <h3>Events</h3>
+    <ul id="events"></ul>
+
+    <h3>Cart</h3>
+    <ul id="cart"></ul>
+    <p><b>Total:</b> ₹<span id="total">0</span></p>
+    <button onclick="pay()">Pay Now</button>
+
+    <h3>Order Status</h3>
+    <ul id="orders"></ul>
+
+    <button onclick="logout()">Logout</button>
+</div>
+
+</div>
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>
